@@ -1,0 +1,14 @@
+#navKiri{
+    display: flex;
+    justify-content: space-between;
+}
+
+#navKiri img{
+    width: 100px;
+    height: auto;
+}
+
+#navkanan{
+    display: flex;
+    gap: 10px;
+}
