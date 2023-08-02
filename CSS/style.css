@@ -1,14 +1,519 @@
-#navKiri{
-    display: flex;
-    justify-content: space-between;
+
+a {
+    color: black;
+    text-decoration: none;
 }
 
-#navKiri img{
-    width: 100px;
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+#navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #EEF1F5;
+    
+}
+
+#navigation img {
+    width: 60px;
     height: auto;
 }
 
-#navkanan{
+#navigation.position {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.navKanan > .menu {
+    display: inline-flex;
+}
+
+.navKanan .menu button {
+    background-color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid gray;
+    text-align: center;
+    min-width: 100px;
+}
+
+button:hover {
+    border: 1px solid gray;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: ease-out;
+}
+
+.navKanan .menu button:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+.navKanan .menu button:last-child {
+    border-radius: 0 4px 4px 0;
+    margin-right: -1px; 
+}
+
+
+
+
+
+/*bagian header*/
+
+#header {
+    margin-top: 100px;
+    align-items: center;
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    color: #485664;
+}
+
+#subtitle {
+    font-size: 17px;
+    color: #798DA3;
+    font-weight: 300;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+
+
+
+
+h4.desc {
+    font-size: 14px;
+    text-align: justify;
+    color: #798DA3;
+    font-weight: normal;
+    height: 25px;
+}
+
+#home {
+    display: flex;
+    gap: 20px;
+    font-size: small;
+}
+
+#article {
+    flex-basis: 55%;
+    padding: 10px;
+    margin-left: 80px;
+}
+
+
+
+.horizontal-line {
+    border: 3.1px solid #ccc; 
+    width: 20%; 
+    margin: 20px auto; 
+    border-radius: 5px; 
+    border-color: #EDF0F4;
+    margin-top: 20px;
+}
+
+
+#form {
+    font-style: normal;
+    color: #3B4754;
+    padding: 40px;
+    background-color: #EDF0F4;
+    margin-right: 80px;
+    flex-grow: 1;
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 650px;
+}
+
+.notee {
+    font-style: italic;
+    font-weight: normal;
+    padding: 5px;
+    color: #798DA3;
+    margin-left: 60px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.field {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    padding: 5px 18px;
+    border: 2.5px solid #8d9baa;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.field::placeholder {
+    color: #adabab;
+    font-size: 15px;
+}
+
+#selectOption{
+    font-size: 15px;
+    color:#adabab;
+}
+
+.inputt {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 30px;
+}
+  
+button[type="submit"] {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #29323D;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background-color: #212831;
+}
+
+.field.invalid {
+    border-color: red;
+}
+
+.field.valid {
+    border-color: green;
+}
+
+.message {
+    display: none;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.container {
+    position: relative;
+    margin-bottom: 20px; 
+}
+
+/*auto slide */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+}
+
+.mySlides{
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+
+
+
+/* AUTO SLIDESHOW */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.numbertext {
+    color: #212831;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.slideDot{
+    text-align: center;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+
+.image {
+    flex-shrink: 0;
+    width: 60px; 
+    margin-right: 10px;
+}
+
+.text-review {
+    flex-grow: 1;
+}
+
+.text-line {
+    margin-bottom: 3px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
+}
+
+/*FEATURE*/
+.tittle-con{
+    font-family: 'Open Sans', sans-serif;
+    color: #29323D;
+    margin-left: 200px;
+    margin-top: 80px;
+}
+
+.container2 {
+    max-width: 1010px;
+    margin: 0 auto;
+    padding: 30px;
+    font-family: 'Open Sans', sans-serif;
+    color: #29323D;
+    font-size: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.col {
+    flex: 1;
+    text-align: center;
+}
+
+.icon-best-price {
+    
+    font-size: 40px;
+    margin-right: 10px;
+    width: 80px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.icon-profesional{
+    font-size: 40px;
+    margin-right: 10px;
+    width: 150px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.icon-experience{
+    font-size: 40px;
+    margin-right: 10px;
+    width: 90px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.feature-ttl{
+    font-family: 'Open Sans', sans-serif;
+    color: #29323D;
+    font-size: 20px;
+}
+
+.feature-desc{
+    font-family: 'Open Sans', sans-serif;
+    color: #798DA3;
+    font-size: 13px;
+}
+/*our package*/
+
+
+
+#header-ourpage {
+    background-color: #EDF0F4;
+    color: #29323D;
+    padding: 30px; 
+    text-align: center; 
+    font-family: 'Open Sans', sans-serif;
+    height: 200px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container3 {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.row2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.col2 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    /* Tambahkan padding di sisi kiri dan kanan elemen */
+    padding: 0 10px;
+}
+
+/* Tambahkan margin pada elemen untuk memberi jarak antar elemen */
+.col2:not(:last-child) {
+    margin-right: 10px;
+}
+
+.icon2 {
+    font-size: 40px;
+    margin-right: 10px;
+    width: 50px;
+    margin-bottom: 30px;
+}
+
+p.icon-title {
+    font-weight: bold;
+    /* Tambahkan margin atas untuk memberi jarak ke elemen di atasnya */
+    margin-top: 50px;
+    color: #3B4754;
+}
+
+p.icon-title2 {
+    font-size: 13px;
+    color: #798DA3;
+}
+
+/*closing*/
+
+#header3 {
+    background-color: white;
+    height: 500px;
+    margin-top: 50px;
+    padding: 10px; /* Jarak antara teks dengan batas header */
+    border: 2px solid #EEF1F5;
+    box-sizing: border-box; /* Pastikan padding tidak mempengaruhi lebar header */
+    margin-bottom: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#header3 h2 {
+    color: #29323D;
+    text-align: center; 
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    padding: 20px;
+}
+
+.desc-close {
+    font-size: 13px;
+    color: #798DA3;
+    text-align: center;
+    height: 1px;
+}
+
+button[class="button-call"] {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #29323D;
+    color: white;
+    padding: 14px;
+    font-size: 13px;
+    border-radius: 2.5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 15%;
+    font-weight: bold;
+    margin-top: 120px;
+    margin-bottom: 30px;
+}
+
+button[class="button-call"]:hover {
+    background-color: #212831;
+}
+
+/* Gaya CSS untuk footer */
+footer {
+    color: #798DA3;
+    padding: 34px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-content {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+}
+
+
+.logo {
+    /* Atur posisi logo di atas teks */
+    margin-bottom: 10px;
+}
+
+.logo img {
+    width: auto; /* Atur lebar gambar */
+    height: 40px; /* Biarkan tinggi gambar menyesuaikan agar tetap proporsional */
+}
+
+.footer-content p span {
+    margin-right: 10px;
+    height: auto; 
 }
